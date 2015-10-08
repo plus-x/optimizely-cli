@@ -62,6 +62,11 @@ program
     "Push a variation to Optimizely (experiment must be pushed first)")
   .action(loadCommand("push-variation"));
 
+program
+  .command("pull-experiment <path>")
+  .description("Pull an experiment from Optimizely")
+  .action(loadCommand("pull-experiment"));
+
 //Show help if no arguments are passed
 if (!process.argv.slice(2).length) {
   program._name = process.argv[1];
